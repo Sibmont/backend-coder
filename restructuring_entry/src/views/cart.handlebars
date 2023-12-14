@@ -1,0 +1,15 @@
+<h1>Cart Products</h1>
+<div id="container" style="display: grid; gap:1rem; grid-template-columns:repeat(5, 1fr)">
+    {{#each products}}
+        <div>
+            <p>Product: {{this.product.title}}</p>
+            <p>description: {{this.product.description}}</p>
+            <p>price: {{this.product.price}}</p>
+            <p>code: {{this.product.code}}</p>
+            <p>stock: {{this.product.stock}}</p>
+            <p>category: {{this.product.category}}</p>
+            <p>status: {{this.product.status}}</p>
+            <p>quantity: {{this.quantity}}</p>
+        </div>
+    {{/each}}
+</div>
