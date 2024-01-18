@@ -1,0 +1,28 @@
+<div>
+    <h1>Welcome, {{user.name}}!</h1>
+    <p>Email: {{user.email}}</p>
+    {{#if user.age}}
+    <p>Age: {{user.age}}</p>
+    {{/if}}
+    <p>Role: {{user.role}}</p>
+    <a href="/api/sessions/logout"><button>Logout</button></a>
+</div>
+<br/>
+<h1>Products</h1>
+<div id="container" style="display: grid; gap:1rem; grid-template-columns:repeat(5, 1fr)">
+    {{#each products}}
+        <div>
+            <p>title: {{this.title}}</p>
+            <p>description: {{this.description}}</p>
+            <p>price: {{this.price}}</p>
+            <p>code: {{this.code}}</p>
+            <p>stock: {{this.stock}}</p>
+            <p>category: {{this.category}}</p>
+            <p>status: {{this.status}}</p>
+            <p>id: {{this.id}}</p>
+            <button class="atc-btn" data-product-id="{{this.id}}">Add to Cart</button>
+        </div>
+    {{/each}}
+</div>
+
+<script src="/js/products.js"></script>
